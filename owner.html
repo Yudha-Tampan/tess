@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owner - NEOXR AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-ring"></div>
+  <div class="loader-terminal"><span id="loader-text">booting neoxr_ai</span><span class="cursor"></span></div>
+</div>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/img/logo.png" alt="Logo" class="nav-logo" id="nav-logo" loading="lazy">
+  </div>
+  <div class="nav-center" id="nav-title">NEOXR AI</div>
+  <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-menu" id="nav-menu">
+  <div class="nav-menu-header">
+    <button class="nav-close" id="nav-close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="nav-menu-list">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="tentang.html"><i class="fa-solid fa-circle-info"></i>Tentang Bot</a></li>
+    <li><a href="owner.html" class="active"><i class="fa-solid fa-user-tie"></i>Owner</a></li>
+    <li><a href="pembayaran.html"><i class="fa-solid fa-wallet"></i>Pembayaran</a></li>
+  </ul>
+</div>
+
+<main>
+  <div class="container">
+    <section class="owner-section">
+      <div class="glass-card owner-card fade-in">
+        <img src="assets/img/owner.png" alt="Owner" class="owner-photo" id="owner-photo" loading="lazy">
+        <div class="owner-name" id="owner-name">DIKZZ</div>
+        <span class="owner-role mono-tag">founder &amp; developer</span>
+        <p class="owner-desc" id="owner-desc">Memuat deskripsi owner...</p>
+        <a href="#" class="btn-whatsapp" id="owner-wa-btn" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          Chat via WhatsApp
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-brand" id="footer-text">NEOXR AI - DIKZZ</div>
+  <div class="foot-year" id="footer-year">2026</div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+<script src="owner.js"></script>
+</body>
+</html>

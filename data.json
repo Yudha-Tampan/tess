@@ -1,0 +1,87 @@
+{
+  "bot": {
+    "nama": "NEOXR AI",
+    "logo": "assets/img/logo.png",
+    "gambar": "assets/img/bot-hero.png",
+    "slogan": "WhatsApp Bot Assistant Generasi Baru",
+    "deskripsi": "NEOXR AI adalah WhatsApp bot multifungsi yang dirancang untuk membantu aktivitas harian, mulai dari download media, chat dengan AI, membuat sticker, hingga mengelola grup secara otomatis. Dibangun dengan performa tinggi dan respon cepat, NEOXR AI siap menjadi asisten digital terbaikmu di WhatsApp."
+  },
+  "fitur": [
+    { "nama": "Downloader", "icon": "fa-solid fa-download" },
+    { "nama": "AI Chat", "icon": "fa-solid fa-robot" },
+    { "nama": "Sticker Maker", "icon": "fa-solid fa-icons" },
+    { "nama": "Anime Menu", "icon": "fa-solid fa-dragon" },
+    { "nama": "Game Menu", "icon": "fa-solid fa-gamepad" },
+    { "nama": "Search Engine", "icon": "fa-solid fa-magnifying-glass" },
+    { "nama": "Owner Menu", "icon": "fa-solid fa-crown" },
+    { "nama": "Group Menu", "icon": "fa-solid fa-users" },
+    { "nama": "Admin Menu", "icon": "fa-solid fa-user-shield" },
+    { "nama": "Tools Menu", "icon": "fa-solid fa-toolbox" },
+    { "nama": "Converter", "icon": "fa-solid fa-arrows-rotate" },
+    { "nama": "Utility Menu", "icon": "fa-solid fa-screwdriver-wrench" },
+    { "nama": "Panel Access", "icon": "fa-solid fa-gauge-high" },
+    { "nama": "Hosting Info", "icon": "fa-solid fa-server" },
+    { "nama": "Image AI", "icon": "fa-solid fa-image" },
+    { "nama": "Text AI", "icon": "fa-solid fa-comment-dots" }
+  ],
+  "faq": [
+    {
+      "pertanyaan": "Apa itu NEOXR AI?",
+      "jawaban": "NEOXR AI adalah WhatsApp bot berbasis AI yang menyediakan berbagai fitur seperti downloader, sticker maker, AI chat, game, dan tools grup untuk memudahkan aktivitas kamu di WhatsApp."
+    },
+    {
+      "pertanyaan": "Bagaimana cara menggunakan bot ini?",
+      "jawaban": "Kamu cukup menyewa paket BASIC atau VIP, lalu bot akan aktif secara otomatis di nomor WhatsApp yang kamu daftarkan sesuai durasi paket."
+    },
+    {
+      "pertanyaan": "Apakah bot ini aman digunakan?",
+      "jawaban": "Ya, NEOXR AI dijamin aman digunakan selama mengikuti ketentuan penggunaan dan tidak melakukan spam atau pelanggaran kebijakan WhatsApp."
+    },
+    {
+      "pertanyaan": "Metode pembayaran apa saja yang tersedia?",
+      "jawaban": "Kami menerima pembayaran melalui Dana, OVO, GoPay, dan QRIS untuk memudahkan transaksi kamu."
+    },
+    {
+      "pertanyaan": "Apakah ada garansi jika bot error?",
+      "jawaban": "Selama masa aktif sewa, kendala teknis akan ditangani langsung oleh owner tanpa biaya tambahan."
+    },
+    {
+      "pertanyaan": "Bagaimana cara menghubungi owner?",
+      "jawaban": "Kamu bisa menghubungi owner langsung melalui tombol WhatsApp yang tersedia di halaman Owner."
+    }
+  ],
+  "owner": {
+    "nama": "DIKZZ",
+    "foto": "assets/img/owner.png",
+    "deskripsi": "DIKZZ adalah developer dan pengelola utama NEOXR AI. Berpengalaman dalam membangun sistem bot WhatsApp yang stabil dan responsif, DIKZZ berkomitmen memberikan layanan terbaik serta dukungan penuh kepada seluruh pengguna NEOXR AI.",
+    "whatsapp": "6281234567890"
+  },
+  "pembayaran": {
+    "qris": "assets/img/qris.png",
+    "dana": "081234567890",
+    "ovo": "081234567890",
+    "gopay": "081234567890"
+  },
+  "paket_basic": [
+    { "nama": "BASIC 1", "durasi": "7 Hari", "harga_lama": "3k", "harga": "5k", "hemat": "" },
+    { "nama": "BASIC 2", "durasi": "15 Hari", "harga_lama": "10k", "harga": "12k", "hemat": "" },
+    { "nama": "BASIC 3", "durasi": "30 Hari", "harga_lama": "15k", "harga": "17k", "hemat": "" },
+    { "nama": "BASIC 4", "durasi": "60 Hari", "harga_lama": "30k", "harga": "33k", "hemat": "23%" },
+    { "nama": "BASIC 5", "durasi": "90 Hari", "harga_lama": "40k", "harga": "45k", "hemat": "30%" },
+    { "nama": "BASIC 6", "durasi": "180 Hari", "harga_lama": "75k", "harga": "80k", "hemat": "37%" },
+    { "nama": "BASIC 7", "durasi": "365 Hari", "harga_lama": "140k", "harga": "150k", "hemat": "42%" }
+  ],
+  "paket_vip": [
+    { "nama": "VIP 1", "durasi": "7 Hari", "harga_lama": "7k", "harga": "10k", "hemat": "" },
+    { "nama": "VIP 2", "durasi": "15 Hari", "harga_lama": "15k", "harga": "20k", "hemat": "" },
+    { "nama": "VIP 3", "durasi": "30 Hari", "harga_lama": "25k", "harga": "30k", "hemat": "" },
+    { "nama": "VIP 4", "durasi": "60 Hari", "harga_lama": "50k", "harga": "60k", "hemat": "" },
+    { "nama": "VIP 5", "durasi": "90 Hari", "harga_lama": "70k", "harga": "80k", "hemat": "" },
+    { "nama": "VIP 6", "durasi": "180 Hari", "harga_lama": "130k", "harga": "155k", "hemat": "" },
+    { "nama": "VIP 7", "durasi": "365 Hari", "harga_lama": "240k", "harga": "300k", "hemat": "" }
+  ],
+  "footer": {
+    "teks": "NEOXR AI - DIKZZ",
+    "tahun": "2026"
+  }
+}

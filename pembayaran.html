@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pembayaran - NEOXR AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loading-screen">
+  <div class="loader-ring"></div>
+  <div class="loader-terminal"><span id="loader-text">booting neoxr_ai</span><span class="cursor"></span></div>
+</div>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/img/logo.png" alt="Logo" class="nav-logo" id="nav-logo" loading="lazy">
+  </div>
+  <div class="nav-center" id="nav-title">NEOXR AI</div>
+  <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-menu" id="nav-menu">
+  <div class="nav-menu-header">
+    <button class="nav-close" id="nav-close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="nav-menu-list">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="tentang.html"><i class="fa-solid fa-circle-info"></i>Tentang Bot</a></li>
+    <li><a href="owner.html"><i class="fa-solid fa-user-tie"></i>Owner</a></li>
+    <li><a href="pembayaran.html" class="active"><i class="fa-solid fa-wallet"></i>Pembayaran</a></li>
+  </ul>
+</div>
+
+<main>
+  <div class="container">
+
+    <section class="page-header fade-in">
+      <h1>Pembayaran</h1>
+      <p>Pilih paket sesuai kebutuhanmu, lalu selesaikan pembayaran melalui metode yang tersedia.</p>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2>Paket BASIC</h2>
+        <div class="carousel-nav">
+          <button class="carousel-btn" data-target="basic-payment-carousel" data-dir="-1" aria-label="Geser kiri"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-btn" data-target="basic-payment-carousel" data-dir="1" aria-label="Geser kanan"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="carousel-track" id="basic-payment-carousel">
+        <div class="skeleton skel-card"></div>
+        <div class="skeleton skel-card"></div>
+        <div class="skeleton skel-card"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2>Paket VIP</h2>
+        <div class="carousel-nav">
+          <button class="carousel-btn" data-target="vip-payment-carousel" data-dir="-1" aria-label="Geser kiri"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-btn" data-target="vip-payment-carousel" data-dir="1" aria-label="Geser kanan"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="carousel-track" id="vip-payment-carousel">
+        <div class="skeleton skel-card"></div>
+        <div class="skeleton skel-card"></div>
+        <div class="skeleton skel-card"></div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="foot-brand" id="footer-text">NEOXR AI - DIKZZ</div>
+  <div class="foot-year" id="footer-year">2026</div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="modal-overlay" id="payment-modal">
+  <div class="glass-card modal-box">
+    <div class="modal-header">
+      <h3 id="modal-package-name">Pilih Metode Pembayaran</h3>
+      <button class="modal-close" id="modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="pay-method-list">
+      <button class="pay-method-item" data-method="dana">
+        <div class="pay-method-icon dana"><i class="fa-solid fa-wallet"></i></div>
+        <div class="pay-method-info">
+          <div class="m-name">Dana</div>
+          <div class="m-desc">Transfer ke nomor Dana</div>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="detail-panel" id="detail-dana">
+        <div class="detail-number" id="number-dana">-</div>
+        <button class="btn-copy" data-copy-target="number-dana"><i class="fa-solid fa-copy"></i> Salin Nomor</button>
+      </div>
+
+      <button class="pay-method-item" data-method="ovo">
+        <div class="pay-method-icon ovo"><i class="fa-solid fa-wallet"></i></div>
+        <div class="pay-method-info">
+          <div class="m-name">OVO</div>
+          <div class="m-desc">Transfer ke nomor OVO</div>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="detail-panel" id="detail-ovo">
+        <div class="detail-number" id="number-ovo">-</div>
+        <button class="btn-copy" data-copy-target="number-ovo"><i class="fa-solid fa-copy"></i> Salin Nomor</button>
+      </div>
+
+      <button class="pay-method-item" data-method="gopay">
+        <div class="pay-method-icon gopay"><i class="fa-solid fa-wallet"></i></div>
+        <div class="pay-method-info">
+          <div class="m-name">GoPay</div>
+          <div class="m-desc">Transfer ke nomor GoPay</div>
+        </div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="detail-panel" id="detail-gopay">
+        <div class="detail-number" id="number-gopay">-</div>
+        <button class="btn-copy" data-copy-target="number-gopay"><i class="fa-solid fa-copy"></i> Salin Nomor</button>
+      </div>
+
+      <button class="pay-method-item" data-method="qris" id="qris-trigger">
+        <div class="pay-method-icon qris"><i class="fa-solid fa-qrcode"></i></div>
+        <div class="pay-method-info">
+          <div class="m-name">QRIS</div>
+          <div class="m-desc">Scan kode QR untuk membayar</div>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="qris-popup" id="qris-popup">
+  <div class="glass-card qris-box">
+    <button class="qris-close" id="qris-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    <span class="mono-tag">scan untuk bayar</span>
+    <img src="assets/img/qris.png" alt="QRIS" id="qris-image" loading="lazy">
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container"></div>
+
+<script src="script.js"></script>
+<script src="pembayaran.js"></script>
+</body>
+</html>
