@@ -8,8 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js"></script>
 </head>
-<body>
+<body data-page-title="title.owner">
 
 <div id="loading-screen">
   <div class="loader-ring"></div>
@@ -30,28 +31,68 @@
 
 <div class="nav-menu" id="nav-menu">
   <div class="nav-menu-header">
-    <button class="nav-close" id="nav-close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
+    <div class="nav-menu-brand">
+      <img src="assets/img/logo.png" alt="Logo" id="nav-menu-logo" loading="lazy">
+      <span id="nav-menu-name">NEOXR AI</span>
+    </div>
+    <button class="nav-close" id="nav-close" data-i18n-aria="nav.menu.close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
+
+  <div class="nav-group-label" data-i18n="nav.group.main">Utama</div>
   <ul class="nav-menu-list">
-    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-    <li><a href="tentang.html"><i class="fa-solid fa-circle-info"></i>Tentang Bot</a></li>
-    <li><a href="owner.html" class="active"><i class="fa-solid fa-user-tie"></i>Owner</a></li>
-    <li><a href="pembayaran.html"><i class="fa-solid fa-wallet"></i>Pembayaran</a></li>
+    <li><a href="index.html"><i class="fa-solid fa-house"></i><span data-i18n="nav.beranda">Beranda</span></a></li>
+    <li><a href="tentang.html"><i class="fa-solid fa-download"></i><span data-i18n="nav.fitur">Fitur Bot</span></a></li>
+    <li><a href="tentang.html#faq-list"><i class="fa-solid fa-comment"></i><span data-i18n="nav.faq">Tanya Jawab</span></a></li>
   </ul>
+
+  <div class="nav-group-label" data-i18n="nav.group.layanan">Layanan</div>
+  <ul class="nav-menu-list">
+    <li><a href="pembayaran.html"><i class="fa-solid fa-credit-card"></i><span data-i18n="nav.paket">Paket Harga</span></a></li>
+    <li><a href="owner.html" class="active"><i class="fa-solid fa-user-tie"></i><span data-i18n="nav.owner">Owner</span></a></li>
+  </ul>
+
+  <div class="nav-group-label" data-i18n="nav.group.info">Informasi</div>
+  <ul class="nav-menu-list">
+    <li><a href="tentang.html"><i class="fa-solid fa-circle-info"></i><span data-i18n="nav.tentang">Tentang Bot</span></a></li>
+  </ul>
+
+  <div class="nav-menu-footer">
+    <div class="nav-pref-row">
+      <button class="nav-pref-btn"><i class="fa-solid fa-globe"></i><span data-i18n="nav.lang">Indonesia</span></button>
+      <button class="nav-pref-btn"><i class="fa-solid fa-moon"></i><span data-i18n="nav.theme">Gelap</span></button>
+    </div>
+    <a href="#" class="nav-action-btn primary"><i class="fa-solid fa-comment-dots"></i><span data-i18n="nav.join">Gabung Channel</span></a>
+  </div>
 </div>
 
 <main>
   <div class="container">
     <section class="owner-section">
+      <div class="owner-section-header fade-in">
+        <span class="owner-section-badge"><i class="fa-solid fa-users"></i><span data-i18n="owner.badge">Tim Kami</span></span>
+        <h1 class="owner-section-title" data-i18n="owner.title" data-i18n-html>Hubungi Owner &amp;<br>Sub-Owner</h1>
+        <p class="owner-section-desc" data-i18n="owner.desc">Tim dukungan kami siap membantu Anda dengan berbagai pertanyaan dan permasalahan.</p>
+      </div>
+
+      <div class="owner-divider"><span><i class="fa-solid fa-crown"></i><span data-i18n="owner.section">Owner</span></span></div>
+
       <div class="glass-card owner-card fade-in">
-        <img src="assets/img/owner.png" alt="Owner" class="owner-photo" id="owner-photo" loading="lazy">
-        <div class="owner-name" id="owner-name">DIKZZ</div>
-        <span class="owner-role mono-tag">founder &amp; developer</span>
-        <p class="owner-desc" id="owner-desc">Memuat deskripsi owner...</p>
-        <a href="#" class="btn-whatsapp" id="owner-wa-btn" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp"></i>
-          Chat via WhatsApp
-        </a>
+        <div class="owner-avatar-wrap">
+          <img src="assets/img/owner.png" alt="Owner" class="owner-photo" id="owner-photo" loading="lazy">
+          <div class="owner-crown"><i class="fa-solid fa-crown"></i></div>
+        </div>
+        <div class="owner-info">
+          <div class="owner-name" id="owner-name">DIKZZ</div>
+          <div class="owner-number" id="owner-number">-</div>
+          <span class="owner-role"><i class="fa-solid fa-crown"></i><span data-i18n="owner.role">Owner Resmi</span></span>
+        </div>
+        <div class="owner-card-full">
+          <p class="owner-desc" id="owner-desc" data-i18n="owner.loading">Memuat deskripsi owner...</p>
+          <a href="#" class="btn-whatsapp" id="owner-wa-btn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-i18n="owner.contact">Hubungi via WhatsApp</span>
+          </a>
+        </div>
       </div>
     </section>
   </div>
@@ -62,7 +103,7 @@
   <div class="foot-year" id="footer-year">2026</div>
 </footer>
 
-<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+<button class="back-to-top" id="back-to-top" data-i18n-aria="back.to.top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
 
 <script src="script.js"></script>
 <script src="owner.js"></script>

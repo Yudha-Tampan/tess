@@ -8,8 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js"></script>
 </head>
-<body>
+<body data-page-title="title.index">
 
 <div id="loading-screen">
   <div class="loader-ring"></div>
@@ -30,69 +31,71 @@
 
 <div class="nav-menu" id="nav-menu">
   <div class="nav-menu-header">
-    <button class="nav-close" id="nav-close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
+    <div class="nav-menu-brand">
+      <img src="assets/img/logo.png" alt="Logo" id="nav-menu-logo" loading="lazy">
+      <span id="nav-menu-name">NEOXR AI</span>
+    </div>
+    <button class="nav-close" id="nav-close" data-i18n-aria="nav.menu.close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
+
+  <div class="nav-group-label" data-i18n="nav.group.main">Utama</div>
   <ul class="nav-menu-list">
-    <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
-    <li><a href="tentang.html"><i class="fa-solid fa-circle-info"></i>Tentang Bot</a></li>
-    <li><a href="owner.html"><i class="fa-solid fa-user-tie"></i>Owner</a></li>
-    <li><a href="pembayaran.html"><i class="fa-solid fa-wallet"></i>Pembayaran</a></li>
+    <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i><span data-i18n="nav.beranda">Beranda</span></a></li>
+    <li><a href="tentang.html"><i class="fa-solid fa-download"></i><span data-i18n="nav.fitur">Fitur Bot</span></a></li>
+    <li><a href="tentang.html#faq-list"><i class="fa-solid fa-comment"></i><span data-i18n="nav.faq">Tanya Jawab</span></a></li>
   </ul>
+
+  <div class="nav-group-label" data-i18n="nav.group.layanan">Layanan</div>
+  <ul class="nav-menu-list">
+    <li><a href="pembayaran.html"><i class="fa-solid fa-credit-card"></i><span data-i18n="nav.paket">Paket Harga</span></a></li>
+    <li><a href="owner.html"><i class="fa-solid fa-user-tie"></i><span data-i18n="nav.owner">Owner</span></a></li>
+  </ul>
+
+  <div class="nav-group-label" data-i18n="nav.group.info">Informasi</div>
+  <ul class="nav-menu-list">
+    <li><a href="tentang.html"><i class="fa-solid fa-circle-info"></i><span data-i18n="nav.tentang">Tentang Bot</span></a></li>
+  </ul>
+
+  <div class="nav-menu-footer">
+    <div class="nav-pref-row">
+      <button class="nav-pref-btn"><i class="fa-solid fa-globe"></i><span data-i18n="nav.lang">Indonesia</span></button>
+      <button class="nav-pref-btn"><i class="fa-solid fa-moon"></i><span data-i18n="nav.theme">Gelap</span></button>
+    </div>
+    <a href="https://whatsapp.com/channel/0029Vb6dW5Z1iUxSKLbWrs19" class="nav-action-btn primary"><i class="fa-solid fa-comment-dots"></i><span data-i18n="nav.join">Gabung Channel</span></a>
+  </div>
 </div>
 
 <main>
   <div class="container">
 
+    <section class="hero-section fade-in">
+      <span class="hero-badge"><i class="fa-solid fa-comment-dots"></i><span id="hero-badge-text" data-i18n="hero.badge">Bot WhatsApp Multifungsi & Mudah</span></span>
+      <h1 class="hero-title"><span data-i18n="hero.title.line1">Bot WhatsApp</span><br><span class="grad-blue" id="hero-title-1">NEOXR</span> <span class="grad-cyan" id="hero-title-2">AI</span></h1>
+      <p class="hero-desc" id="hero-desc">Bot WhatsApp multifungsi dengan fitur lengkap untuk aktivitas harianmu, lengkap dengan paket gratis dan premium yang terjangkau.</p>
+      <div class="hero-actions">
+        <a href="https://whatsapp.com/channel/0029Vb6dW5Z1iUxSKLbWrs19" class="hero-btn style-violet"><i class="fa-solid fa-comment-dots"></i><span data-i18n="nav.join">Gabung Channel</span></a>
+        <a href="tentang.html" class="hero-btn style-outline"><i class="fa-solid fa-compass"></i><span data-i18n="hero.explore">Jelajahi Fitur</span></a>
+        <a href="pembayaran.html" class="hero-btn style-cyan"><i class="fa-solid fa-crown"></i><span data-i18n="hero.premium">Paket Premium</span></a>
+        <a href="owner.html" class="hero-btn style-outline"><i class="fa-solid fa-user"></i><span data-i18n="hero.owner">Owner</span></a>
+      </div>
+    </section>
+
     <section class="announcement-section">
       <div class="glass-card announcement-card fade-in">
-        <span class="announcement-eyebrow mono-tag"><span class="dot"></span>pengumuman resmi</span>
-        <h2 class="announcement-title">Pengumuman Perubahan Harga</h2>
+        <span class="announcement-eyebrow mono-tag"><span class="dot"></span><span id="announcement-eyebrow">pengumuman resmi</span></span>
+        <h2 class="announcement-title" id="announcement-title">Pengumuman Perubahan Harga</h2>
         <div class="announcement-body" id="announcement-body">
-          <p>Assalamualaikum / Halo semua,</p>
-          <p>Karena adanya kenaikan kurs dolar yang cukup signifikan beberapa waktu terakhir, kami terpaksa menyesuaikan harga beberapa paket dan layanan mulai hari ini.</p>
-
-          <h3>Sewa Bot &mdash; Perubahan Harga Terbaru</h3>
-          <p>Beberapa paket BASIC & VIP mengalami penyesuaian harga. Disarankan mengambil paket 2 bulan ke atas karena jauh lebih hemat.</p>
-
-          <h3>Paket Basic</h3>
-          <ul class="price-diff-list">
-            <li><span class="plabel">BASIC 1 (7 hari)</span><span class="pvalue"><span class="old-price">3k</span><span class="new-price">5k</span></span></li>
-            <li><span class="plabel">BASIC 2 (15 hari)</span><span class="pvalue"><span class="old-price">10k</span><span class="new-price">12k</span></span></li>
-            <li><span class="plabel">BASIC 3 (30 hari)</span><span class="pvalue"><span class="old-price">15k</span><span class="new-price">17k</span></span></li>
-            <li><span class="plabel">BASIC 4 (60 hari)</span><span class="pvalue"><span class="old-price">30k</span><span class="new-price">33k</span><span class="save-tag">hemat 23%</span></span></li>
-            <li><span class="plabel">BASIC 5 (90 hari)</span><span class="pvalue"><span class="old-price">40k</span><span class="new-price">45k</span><span class="save-tag">hemat 30%</span></span></li>
-            <li><span class="plabel">BASIC 6 (180 hari)</span><span class="pvalue"><span class="old-price">75k</span><span class="new-price">80k</span><span class="save-tag">hemat 37%</span></span></li>
-            <li><span class="plabel">BASIC 7 (365 hari)</span><span class="pvalue"><span class="old-price">140k</span><span class="new-price">150k</span><span class="save-tag">hemat 42%</span></span></li>
-          </ul>
-
-          <h3>Paket VIP</h3>
-          <ul class="price-diff-list">
-            <li><span class="plabel">VIP 1 (7 hari)</span><span class="pvalue"><span class="old-price">7k</span><span class="new-price">10k</span></span></li>
-            <li><span class="plabel">VIP 2 (15 hari)</span><span class="pvalue"><span class="old-price">15k</span><span class="new-price">20k</span></span></li>
-            <li><span class="plabel">VIP 3 (30 hari)</span><span class="pvalue"><span class="old-price">25k</span><span class="new-price">30k</span></span></li>
-            <li><span class="plabel">VIP 4 (60 hari)</span><span class="pvalue"><span class="old-price">50k</span><span class="new-price">60k</span></span></li>
-            <li><span class="plabel">VIP 5 (90 hari)</span><span class="pvalue"><span class="old-price">70k</span><span class="new-price">80k</span></span></li>
-            <li><span class="plabel">VIP 6 (180 hari)</span><span class="pvalue"><span class="old-price">130k</span><span class="new-price">155k</span></span></li>
-            <li><span class="plabel">VIP 7 (365 hari)</span><span class="pvalue"><span class="old-price">240k</span><span class="new-price">300k</span></span></li>
-          </ul>
-
-          <div class="note-box">
-            <strong>Catatan Penting</strong><br><br>
-            Harga lama masih berlaku untuk pembayaran yang sudah dilakukan sebelum pengumuman ini.<br><br>
-            Kenaikan ini murni akibat fluktuasi kurs dolar terhadap Rupiah.<br><br>
-            Kami berusaha menekan kenaikan seminimal mungkin agar tetap terjangkau.<br><br>
-            Terima kasih banyak atas pengertian dan dukungannya.
-          </div>
+          <div class="skeleton" style="height:220px;"></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="section-heading">
-        <h2>Paket BASIC</h2>
+        <h2 data-i18n="section.basic">Paket BASIC</h2>
         <div class="carousel-nav">
-          <button class="carousel-btn" data-target="basic-carousel" data-dir="-1" aria-label="Geser kiri"><i class="fa-solid fa-chevron-left"></i></button>
-          <button class="carousel-btn" data-target="basic-carousel" data-dir="1" aria-label="Geser kanan"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="carousel-btn" data-target="basic-carousel" data-dir="-1" data-i18n-aria="carousel.left" aria-label="Geser kiri"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-btn" data-target="basic-carousel" data-dir="1" data-i18n-aria="carousel.right" aria-label="Geser kanan"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
       <div class="carousel-track" id="basic-carousel">
@@ -104,10 +107,10 @@
 
     <section>
       <div class="section-heading">
-        <h2>Paket VIP</h2>
+        <h2 data-i18n="section.vip">Paket VIP</h2>
         <div class="carousel-nav">
-          <button class="carousel-btn" data-target="vip-carousel" data-dir="-1" aria-label="Geser kiri"><i class="fa-solid fa-chevron-left"></i></button>
-          <button class="carousel-btn" data-target="vip-carousel" data-dir="1" aria-label="Geser kanan"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="carousel-btn" data-target="vip-carousel" data-dir="-1" data-i18n-aria="carousel.left" aria-label="Geser kiri"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-btn" data-target="vip-carousel" data-dir="1" data-i18n-aria="carousel.right" aria-label="Geser kanan"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
       <div class="carousel-track" id="vip-carousel">
@@ -125,7 +128,7 @@
   <div class="foot-year" id="footer-year">2026</div>
 </footer>
 
-<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+<button class="back-to-top" id="back-to-top" data-i18n-aria="back.to.top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
 
 <div class="toast-container" id="toast-container"></div>
 

@@ -1,34 +1,38 @@
 var siteData = null;
 var activePackageName = "";
+var activePackageNameEn = "";
 
-function buildPaymentCard(pkg, badgeText, botImage) {
+function buildPaymentCard(pkg, badgeText, botImage, lang) {
   var card = document.createElement("div");
   card.className = "glass-card pay-card pkg-card";
 
   var tagHtml = "";
   if (pkg.hemat) {
-    tagHtml = '<span class="pkg-tag">hemat ' + pkg.hemat + "</span>";
+    tagHtml = '<span class="pkg-tag">' + t("footer.hemat", lang) + " " + pkg.hemat + "</span>";
   } else {
     tagHtml = '<span class="pkg-tag">' + badgeText + "</span>";
   }
+
+  var durasi = getLang(pkg, "durasi", lang);
+  var durasiId = pkg.durasi;
 
   card.innerHTML =
     tagHtml +
     '<div class="pkg-icon"><img src="' + botImage + '" alt="' + pkg.nama + '" loading="lazy"></div>' +
     '<div class="pay-name">' + pkg.nama + "</div>" +
-    '<div class="pay-duration">' + pkg.durasi + "</div>" +
+    '<div class="pay-duration">' + durasi + "</div>" +
     '<div class="pay-price">' + pkg.harga + "</div>" +
-    '<button class="btn-bayar" data-pkg-name="' + pkg.nama + " (" + pkg.durasi + ')">Bayar</button>';
+    '<button class="btn-bayar" data-pkg-name="' + pkg.nama + " (" + durasiId + ')" data-pkg-name-en="' + pkg.nama + " (" + (pkg.durasi_en || pkg.durasi) + ')">' + t("pay.button", lang) + "</button>";
 
   return card;
 }
 
-function renderPaymentCarousel(containerId, packages, badgeText, botImage) {
+function renderPaymentCarousel(containerId, packages, badgeText, botImage, lang) {
   var container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = "";
   packages.forEach(function (pkg) {
-    container.appendChild(buildPaymentCard(pkg, badgeText, botImage));
+    container.appendChild(buildPaymentCard(pkg, badgeText, botImage, lang));
   });
 }
 
@@ -51,6 +55,7 @@ function initBayarButtons() {
     btn.addEventListener("click", function (event) {
       createRipple(event);
       activePackageName = btn.getAttribute("data-pkg-name");
+      activePackageNameEn = btn.getAttribute("data-pkg-name-en") || activePackageName;
       openPaymentModal();
     });
   });
@@ -59,7 +64,9 @@ function initBayarButtons() {
 function openPaymentModal() {
   var modal = document.getElementById("payment-modal");
   var title = document.getElementById("modal-package-name");
-  if (title) title.textContent = "Bayar: " + activePackageName;
+  var lang = getStoredLang();
+  var name = lang === "en" ? activePackageNameEn : activePackageName;
+  if (title) title.textContent = t("pay.modal.title.prefix", lang) + name;
   if (modal) modal.classList.add("open");
   document.body.style.overflow = "hidden";
   closeAllDetailPanels();
@@ -70,6 +77,9 @@ function closePaymentModal() {
   if (modal) modal.classList.remove("open");
   document.body.style.overflow = "";
   closeAllDetailPanels();
+
+  var title = document.getElementById("modal-package-name");
+  if (title) title.textContent = t("pay.modal.title", getStoredLang());
 }
 
 function closeAllDetailPanels() {
@@ -120,7 +130,7 @@ function initCopyButtons() {
       var targetId = btn.getAttribute("data-copy-target");
       var target = document.getElementById(targetId);
       if (target) {
-        copyToClipboard(target.textContent.trim(), "Nomor berhasil disalin.");
+        copyToClipboard(target.textContent.trim(), t("pay.copied", getStoredLang()));
       }
     });
   });
@@ -159,19 +169,35 @@ function applyPaymentNumbers(pembayaran) {
   if (qrisImg && pembayaran.qris) qrisImg.src = pembayaran.qris;
 }
 
+function renderPembayaranPage(data, lang) {
+  renderPaymentCarousel("basic-payment-carousel", data.paket_basic, "basic", data.bot.gambar, lang);
+  renderPaymentCarousel("vip-payment-carousel", data.paket_vip, "vip", data.bot.gambar, lang);
+  initBayarButtons();
+  attachRippleToAll(".btn-bayar");
+
+  var title = document.getElementById("modal-package-name");
+  var modal = document.getElementById("payment-modal");
+  if (title && (!modal || !modal.classList.contains("open"))) {
+    title.textContent = t("pay.modal.title", lang);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   loadSiteData(function (data) {
     siteData = data;
-    renderPaymentCarousel("basic-payment-carousel", data.paket_basic, "basic", data.bot.gambar);
-    renderPaymentCarousel("vip-payment-carousel", data.paket_vip, "vip", data.bot.gambar);
+    renderPembayaranPage(data, getStoredLang());
     applyPaymentNumbers(data.pembayaran);
 
     initPaymentCarouselControls();
-    initBayarButtons();
     initModalClose();
     initPaymentMethods();
     initCopyButtons();
     initQrisPopup();
-    attachRippleToAll(".btn-bayar");
   });
+});
+
+document.addEventListener("langchange", function (e) {
+  if (siteData) {
+    renderPembayaranPage(siteData, e.detail.lang);
+  }
 });

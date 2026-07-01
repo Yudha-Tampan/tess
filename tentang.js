@@ -1,14 +1,16 @@
-function renderAboutInfo(bot) {
+var tentangSiteData = null;
+
+function renderAboutInfo(bot, lang) {
   var img = document.getElementById("about-bot-img");
   var name = document.getElementById("about-bot-name");
   var desc = document.getElementById("about-bot-desc");
 
   if (img && bot.gambar) img.src = bot.gambar;
-  if (name && bot.nama) name.textContent = "Tentang " + bot.nama;
-  if (desc && bot.deskripsi) desc.textContent = bot.deskripsi;
+  if (name && bot.nama) name.textContent = t("about.title.prefix", lang) + bot.nama;
+  if (desc) desc.textContent = getLang(bot, "deskripsi", lang);
 }
 
-function renderFeatures(fitur) {
+function renderFeatures(fitur, lang) {
   var grid = document.getElementById("feature-grid");
   if (!grid) return;
   grid.innerHTML = "";
@@ -18,27 +20,27 @@ function renderFeatures(fitur) {
     card.className = "glass-card feature-card";
     card.innerHTML =
       '<div class="feature-icon"><i class="' + item.icon + '"></i></div>' +
-      '<div class="feature-name">' + item.nama + "</div>";
+      '<div class="feature-name">' + getLang(item, "nama", lang) + "</div>";
     grid.appendChild(card);
   });
 }
 
-function renderFaq(faqList) {
+function renderFaq(faqList, lang) {
   var container = document.getElementById("faq-list");
   if (!container) return;
   container.innerHTML = "";
 
-  faqList.forEach(function (item, index) {
+  faqList.forEach(function (item) {
     var faqItem = document.createElement("div");
     faqItem.className = "glass-card faq-item";
 
     var question = document.createElement("button");
     question.className = "faq-question";
-    question.innerHTML = "<span>" + item.pertanyaan + '</span><i class="fa-solid fa-chevron-down"></i>';
+    question.innerHTML = "<span>" + getLang(item, "pertanyaan", lang) + '</span><i class="fa-solid fa-chevron-down"></i>';
 
     var answer = document.createElement("div");
     answer.className = "faq-answer";
-    answer.innerHTML = "<p>" + item.jawaban + "</p>";
+    answer.innerHTML = "<p>" + getLang(item, "jawaban", lang) + "</p>";
 
     question.addEventListener("click", function () {
       var isOpen = faqItem.classList.contains("open");
@@ -56,10 +58,21 @@ function renderFaq(faqList) {
   });
 }
 
+function renderTentangPage(data, lang) {
+  renderAboutInfo(data.bot, lang);
+  renderFeatures(data.fitur, lang);
+  renderFaq(data.faq, lang);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   loadSiteData(function (data) {
-    renderAboutInfo(data.bot);
-    renderFeatures(data.fitur);
-    renderFaq(data.faq);
+    tentangSiteData = data;
+    renderTentangPage(data, getStoredLang());
   });
+});
+
+document.addEventListener("langchange", function (e) {
+  if (tentangSiteData) {
+    renderTentangPage(tentangSiteData, e.detail.lang);
+  }
 });

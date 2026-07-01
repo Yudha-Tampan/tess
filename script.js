@@ -150,11 +150,15 @@ function loadSiteData(callback) {
 function applyGlobalData(data) {
   var navLogo = document.getElementById("nav-logo");
   var navTitle = document.getElementById("nav-title");
+  var menuLogo = document.getElementById("nav-menu-logo");
+  var menuName = document.getElementById("nav-menu-name");
   var footerText = document.getElementById("footer-text");
   var footerYear = document.getElementById("footer-year");
 
   if (navLogo && data.bot && data.bot.logo) navLogo.src = data.bot.logo;
   if (navTitle && data.bot && data.bot.nama) navTitle.textContent = data.bot.nama;
+  if (menuLogo && data.bot && data.bot.logo) menuLogo.src = data.bot.logo;
+  if (menuName && data.bot && data.bot.nama) menuName.textContent = data.bot.nama;
   if (footerText && data.footer && data.footer.teks) footerText.textContent = data.footer.teks;
   if (footerYear && data.footer && data.footer.tahun) footerYear.textContent = "© " + data.footer.tahun;
 }

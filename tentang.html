@@ -8,8 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<script src="i18n.js"></script>
 </head>
-<body>
+<body data-page-title="title.tentang">
 
 <div id="loading-screen">
   <div class="loader-ring"></div>
@@ -30,14 +31,38 @@
 
 <div class="nav-menu" id="nav-menu">
   <div class="nav-menu-header">
-    <button class="nav-close" id="nav-close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
+    <div class="nav-menu-brand">
+      <img src="assets/img/logo.png" alt="Logo" id="nav-menu-logo" loading="lazy">
+      <span id="nav-menu-name">NEOXR AI</span>
+    </div>
+    <button class="nav-close" id="nav-close" data-i18n-aria="nav.menu.close" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
   </div>
+
+  <div class="nav-group-label" data-i18n="nav.group.main">Utama</div>
   <ul class="nav-menu-list">
-    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-    <li><a href="tentang.html" class="active"><i class="fa-solid fa-circle-info"></i>Tentang Bot</a></li>
-    <li><a href="owner.html"><i class="fa-solid fa-user-tie"></i>Owner</a></li>
-    <li><a href="pembayaran.html"><i class="fa-solid fa-wallet"></i>Pembayaran</a></li>
+    <li><a href="index.html"><i class="fa-solid fa-house"></i><span data-i18n="nav.beranda">Beranda</span></a></li>
+    <li><a href="tentang.html" class="active"><i class="fa-solid fa-download"></i><span data-i18n="nav.fitur">Fitur Bot</span></a></li>
+    <li><a href="tentang.html#faq-list"><i class="fa-solid fa-comment"></i><span data-i18n="nav.faq">Tanya Jawab</span></a></li>
   </ul>
+
+  <div class="nav-group-label" data-i18n="nav.group.layanan">Layanan</div>
+  <ul class="nav-menu-list">
+    <li><a href="pembayaran.html"><i class="fa-solid fa-credit-card"></i><span data-i18n="nav.paket">Paket Harga</span></a></li>
+    <li><a href="owner.html"><i class="fa-solid fa-user-tie"></i><span data-i18n="nav.owner">Owner</span></a></li>
+  </ul>
+
+  <div class="nav-group-label" data-i18n="nav.group.info">Informasi</div>
+  <ul class="nav-menu-list">
+    <li><a href="tentang.html"><i class="fa-solid fa-circle-info"></i><span data-i18n="nav.tentang">Tentang Bot</span></a></li>
+  </ul>
+
+  <div class="nav-menu-footer">
+    <div class="nav-pref-row">
+      <button class="nav-pref-btn"><i class="fa-solid fa-globe"></i><span data-i18n="nav.lang">Indonesia</span></button>
+      <button class="nav-pref-btn"><i class="fa-solid fa-moon"></i><span data-i18n="nav.theme">Gelap</span></button>
+    </div>
+    <a href="#" class="nav-action-btn primary"><i class="fa-solid fa-comment-dots"></i><span data-i18n="nav.join">Gabung Channel</span></a>
+  </div>
 </div>
 
 <main>
@@ -46,12 +71,12 @@
     <section class="page-header fade-in">
       <img src="assets/img/bot-hero.png" alt="Bot" class="bot-hero-img" id="about-bot-img" loading="lazy">
       <h1 id="about-bot-name">Tentang NEOXR AI</h1>
-      <p class="about-desc" id="about-bot-desc">Memuat deskripsi bot...</p>
+      <p class="about-desc" id="about-bot-desc" data-i18n="about.loading">Memuat deskripsi bot...</p>
     </section>
 
     <section>
       <div class="section-heading">
-        <h2>Fitur Unggulan</h2>
+        <h2 data-i18n="about.feature.heading">Fitur Unggulan</h2>
       </div>
       <div class="feature-grid" id="feature-grid">
         <div class="skeleton" style="height:120px;"></div>
@@ -62,7 +87,7 @@
     </section>
 
     <section class="faq-section">
-      <h2>Pertanyaan Umum</h2>
+      <h2 data-i18n="about.faq.heading">Pertanyaan Umum</h2>
       <div id="faq-list"></div>
     </section>
 
@@ -74,7 +99,7 @@
   <div class="foot-year" id="footer-year">2026</div>
 </footer>
 
-<button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+<button class="back-to-top" id="back-to-top" data-i18n-aria="back.to.top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
 
 <script src="script.js"></script>
 <script src="tentang.js"></script>

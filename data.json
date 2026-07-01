@@ -4,56 +4,71 @@
     "logo": "assets/img/logo.png",
     "gambar": "assets/img/bot-hero.png",
     "slogan": "WhatsApp Bot Assistant Generasi Baru",
-    "deskripsi": "NEOXR AI adalah WhatsApp bot multifungsi yang dirancang untuk membantu aktivitas harian, mulai dari download media, chat dengan AI, membuat sticker, hingga mengelola grup secara otomatis. Dibangun dengan performa tinggi dan respon cepat, NEOXR AI siap menjadi asisten digital terbaikmu di WhatsApp."
+    "slogan_en": "Next-Generation WhatsApp Bot Assistant",
+    "deskripsi": "NEOXR AI adalah WhatsApp bot multifungsi yang dirancang untuk membantu aktivitas harian, mulai dari download media, chat dengan AI, membuat sticker, hingga mengelola grup secara otomatis. Dibangun dengan performa tinggi dan respon cepat, NEOXR AI siap menjadi asisten digital terbaikmu di WhatsApp.",
+    "deskripsi_en": "NEOXR AI is a multifunctional WhatsApp bot designed to help with daily activities, from downloading media and chatting with AI to making stickers and managing groups automatically. Built for high performance and fast responses, NEOXR AI is ready to be your best digital assistant on WhatsApp."
   },
   "fitur": [
-    { "nama": "Downloader", "icon": "fa-solid fa-download" },
-    { "nama": "AI Chat", "icon": "fa-solid fa-robot" },
-    { "nama": "Sticker Maker", "icon": "fa-solid fa-icons" },
-    { "nama": "Anime Menu", "icon": "fa-solid fa-dragon" },
-    { "nama": "Game Menu", "icon": "fa-solid fa-gamepad" },
-    { "nama": "Search Engine", "icon": "fa-solid fa-magnifying-glass" },
-    { "nama": "Owner Menu", "icon": "fa-solid fa-crown" },
-    { "nama": "Group Menu", "icon": "fa-solid fa-users" },
-    { "nama": "Admin Menu", "icon": "fa-solid fa-user-shield" },
-    { "nama": "Tools Menu", "icon": "fa-solid fa-toolbox" },
-    { "nama": "Converter", "icon": "fa-solid fa-arrows-rotate" },
-    { "nama": "Utility Menu", "icon": "fa-solid fa-screwdriver-wrench" },
-    { "nama": "Panel Access", "icon": "fa-solid fa-gauge-high" },
-    { "nama": "Hosting Info", "icon": "fa-solid fa-server" },
-    { "nama": "Image AI", "icon": "fa-solid fa-image" },
-    { "nama": "Text AI", "icon": "fa-solid fa-comment-dots" }
+    { "nama": "Downloader", "nama_en": "Downloader", "icon": "fa-solid fa-download" },
+    { "nama": "AI Chat", "nama_en": "AI Chat", "icon": "fa-solid fa-robot" },
+    { "nama": "Sticker Maker", "nama_en": "Sticker Maker", "icon": "fa-solid fa-icons" },
+    { "nama": "Anime Menu", "nama_en": "Anime Menu", "icon": "fa-solid fa-dragon" },
+    { "nama": "Game Menu", "nama_en": "Game Menu", "icon": "fa-solid fa-gamepad" },
+    { "nama": "Search Engine", "nama_en": "Search Engine", "icon": "fa-solid fa-magnifying-glass" },
+    { "nama": "Owner Menu", "nama_en": "Owner Menu", "icon": "fa-solid fa-crown" },
+    { "nama": "Group Menu", "nama_en": "Group Menu", "icon": "fa-solid fa-users" },
+    { "nama": "Admin Menu", "nama_en": "Admin Menu", "icon": "fa-solid fa-user-shield" },
+    { "nama": "Tools Menu", "nama_en": "Tools Menu", "icon": "fa-solid fa-toolbox" },
+    { "nama": "Converter", "nama_en": "Converter", "icon": "fa-solid fa-arrows-rotate" },
+    { "nama": "Utility Menu", "nama_en": "Utility Menu", "icon": "fa-solid fa-screwdriver-wrench" },
+    { "nama": "Panel Access", "nama_en": "Panel Access", "icon": "fa-solid fa-gauge-high" },
+    { "nama": "Hosting Info", "nama_en": "Hosting Info", "icon": "fa-solid fa-server" },
+    { "nama": "Image AI", "nama_en": "Image AI", "icon": "fa-solid fa-image" },
+    { "nama": "Text AI", "nama_en": "Text AI", "icon": "fa-solid fa-comment-dots" }
   ],
   "faq": [
     {
       "pertanyaan": "Apa itu NEOXR AI?",
-      "jawaban": "NEOXR AI adalah WhatsApp bot berbasis AI yang menyediakan berbagai fitur seperti downloader, sticker maker, AI chat, game, dan tools grup untuk memudahkan aktivitas kamu di WhatsApp."
+      "pertanyaan_en": "What is NEOXR AI?",
+      "jawaban": "NEOXR AI adalah WhatsApp bot berbasis AI yang menyediakan berbagai fitur seperti downloader, sticker maker, AI chat, game, dan tools grup untuk memudahkan aktivitas kamu di WhatsApp.",
+      "jawaban_en": "NEOXR AI is an AI-based WhatsApp bot that provides various features such as a downloader, sticker maker, AI chat, games, and group tools to make your activities on WhatsApp easier."
     },
     {
       "pertanyaan": "Bagaimana cara menggunakan bot ini?",
-      "jawaban": "Kamu cukup menyewa paket BASIC atau VIP, lalu bot akan aktif secara otomatis di nomor WhatsApp yang kamu daftarkan sesuai durasi paket."
+      "pertanyaan_en": "How do I use this bot?",
+      "jawaban": "Kamu cukup menyewa paket BASIC atau VIP, lalu bot akan aktif secara otomatis di nomor WhatsApp yang kamu daftarkan sesuai durasi paket.",
+      "jawaban_en": "Simply rent a BASIC or VIP package, and the bot will automatically activate on the WhatsApp number you register for the duration of the package."
     },
     {
       "pertanyaan": "Apakah bot ini aman digunakan?",
-      "jawaban": "Ya, NEOXR AI dijamin aman digunakan selama mengikuti ketentuan penggunaan dan tidak melakukan spam atau pelanggaran kebijakan WhatsApp."
+      "pertanyaan_en": "Is this bot safe to use?",
+      "jawaban": "Ya, NEOXR AI dijamin aman digunakan selama mengikuti ketentuan penggunaan dan tidak melakukan spam atau pelanggaran kebijakan WhatsApp.",
+      "jawaban_en": "Yes, NEOXR AI is guaranteed safe to use as long as you follow the terms of use and do not spam or violate WhatsApp's policies."
     },
     {
       "pertanyaan": "Metode pembayaran apa saja yang tersedia?",
-      "jawaban": "Kami menerima pembayaran melalui Dana, OVO, GoPay, dan QRIS untuk memudahkan transaksi kamu."
+      "pertanyaan_en": "What payment methods are available?",
+      "jawaban": "Kami menerima pembayaran melalui Dana, OVO, GoPay, dan QRIS untuk memudahkan transaksi kamu.",
+      "jawaban_en": "We accept payments via Dana, OVO, GoPay, and QRIS to make your transactions easier."
     },
     {
       "pertanyaan": "Apakah ada garansi jika bot error?",
-      "jawaban": "Selama masa aktif sewa, kendala teknis akan ditangani langsung oleh owner tanpa biaya tambahan."
+      "pertanyaan_en": "Is there a guarantee if the bot has an error?",
+      "jawaban": "Selama masa aktif sewa, kendala teknis akan ditangani langsung oleh owner tanpa biaya tambahan.",
+      "jawaban_en": "During the active rental period, technical issues will be handled directly by the owner at no additional cost."
     },
     {
       "pertanyaan": "Bagaimana cara menghubungi owner?",
-      "jawaban": "Kamu bisa menghubungi owner langsung melalui tombol WhatsApp yang tersedia di halaman Owner."
+      "pertanyaan_en": "How do I contact the owner?",
+      "jawaban": "Kamu bisa menghubungi owner langsung melalui tombol WhatsApp yang tersedia di halaman Owner.",
+      "jawaban_en": "You can contact the owner directly through the WhatsApp button available on the Owner page."
     }
   ],
   "owner": {
     "nama": "DIKZZ",
     "foto": "assets/img/owner.png",
     "deskripsi": "DIKZZ adalah developer dan pengelola utama NEOXR AI. Berpengalaman dalam membangun sistem bot WhatsApp yang stabil dan responsif, DIKZZ berkomitmen memberikan layanan terbaik serta dukungan penuh kepada seluruh pengguna NEOXR AI.",
+    "deskripsi_en": "DIKZZ is the developer and main manager of NEOXR AI. Experienced in building stable and responsive WhatsApp bot systems, DIKZZ is committed to providing the best service and full support to all NEOXR AI users.",
     "whatsapp": "6281234567890"
   },
   "pembayaran": {
@@ -63,25 +78,57 @@
     "gopay": "081234567890"
   },
   "paket_basic": [
-    { "nama": "BASIC 1", "durasi": "7 Hari", "harga_lama": "3k", "harga": "5k", "hemat": "" },
-    { "nama": "BASIC 2", "durasi": "15 Hari", "harga_lama": "10k", "harga": "12k", "hemat": "" },
-    { "nama": "BASIC 3", "durasi": "30 Hari", "harga_lama": "15k", "harga": "17k", "hemat": "" },
-    { "nama": "BASIC 4", "durasi": "60 Hari", "harga_lama": "30k", "harga": "33k", "hemat": "23%" },
-    { "nama": "BASIC 5", "durasi": "90 Hari", "harga_lama": "40k", "harga": "45k", "hemat": "30%" },
-    { "nama": "BASIC 6", "durasi": "180 Hari", "harga_lama": "75k", "harga": "80k", "hemat": "37%" },
-    { "nama": "BASIC 7", "durasi": "365 Hari", "harga_lama": "140k", "harga": "150k", "hemat": "42%" }
+    { "nama": "BASIC 1", "durasi": "7 Hari", "durasi_en": "7 Days", "harga_lama": "3k", "harga": "5k", "hemat": "" },
+    { "nama": "BASIC 2", "durasi": "15 Hari", "durasi_en": "15 Days", "harga_lama": "10k", "harga": "12k", "hemat": "" },
+    { "nama": "BASIC 3", "durasi": "30 Hari", "durasi_en": "30 Days", "harga_lama": "15k", "harga": "17k", "hemat": "" },
+    { "nama": "BASIC 4", "durasi": "60 Hari", "durasi_en": "60 Days", "harga_lama": "30k", "harga": "33k", "hemat": "23%" },
+    { "nama": "BASIC 5", "durasi": "90 Hari", "durasi_en": "90 Days", "harga_lama": "40k", "harga": "45k", "hemat": "30%" },
+    { "nama": "BASIC 6", "durasi": "180 Hari", "durasi_en": "180 Days", "harga_lama": "75k", "harga": "80k", "hemat": "37%" },
+    { "nama": "BASIC 7", "durasi": "365 Hari", "durasi_en": "365 Days", "harga_lama": "140k", "harga": "150k", "hemat": "42%" }
   ],
   "paket_vip": [
-    { "nama": "VIP 1", "durasi": "7 Hari", "harga_lama": "7k", "harga": "10k", "hemat": "" },
-    { "nama": "VIP 2", "durasi": "15 Hari", "harga_lama": "15k", "harga": "20k", "hemat": "" },
-    { "nama": "VIP 3", "durasi": "30 Hari", "harga_lama": "25k", "harga": "30k", "hemat": "" },
-    { "nama": "VIP 4", "durasi": "60 Hari", "harga_lama": "50k", "harga": "60k", "hemat": "" },
-    { "nama": "VIP 5", "durasi": "90 Hari", "harga_lama": "70k", "harga": "80k", "hemat": "" },
-    { "nama": "VIP 6", "durasi": "180 Hari", "harga_lama": "130k", "harga": "155k", "hemat": "" },
-    { "nama": "VIP 7", "durasi": "365 Hari", "harga_lama": "240k", "harga": "300k", "hemat": "" }
+    { "nama": "VIP 1", "durasi": "7 Hari", "durasi_en": "7 Days", "harga_lama": "7k", "harga": "10k", "hemat": "" },
+    { "nama": "VIP 2", "durasi": "15 Hari", "durasi_en": "15 Days", "harga_lama": "15k", "harga": "20k", "hemat": "" },
+    { "nama": "VIP 3", "durasi": "30 Hari", "durasi_en": "30 Days", "harga_lama": "25k", "harga": "30k", "hemat": "" },
+    { "nama": "VIP 4", "durasi": "60 Hari", "durasi_en": "60 Days", "harga_lama": "50k", "harga": "60k", "hemat": "" },
+    { "nama": "VIP 5", "durasi": "90 Hari", "durasi_en": "90 Days", "harga_lama": "70k", "harga": "80k", "hemat": "" },
+    { "nama": "VIP 6", "durasi": "180 Hari", "durasi_en": "180 Days", "harga_lama": "130k", "harga": "155k", "hemat": "" },
+    { "nama": "VIP 7", "durasi": "365 Hari", "durasi_en": "365 Days", "harga_lama": "240k", "harga": "300k", "hemat": "" }
   ],
   "footer": {
     "teks": "NEOXR AI - DIKZZ",
     "tahun": "2026"
+  },
+  "pengumuman": {
+    "eyebrow": "pengumuman resmi",
+    "eyebrow_en": "official announcement",
+    "judul": "Pengumuman Perubahan Harga",
+    "judul_en": "Price Change Announcement",
+    "salam": "Assalamualaikum / Halo semua,",
+    "salam_en": "Assalamualaikum / Hello everyone,",
+    "paragraf1": "Karena adanya kenaikan kurs dolar yang cukup signifikan beberapa waktu terakhir, kami terpaksa menyesuaikan harga beberapa paket dan layanan mulai hari ini.",
+    "paragraf1_en": "Due to a significant recent increase in the dollar exchange rate, we are forced to adjust the prices of several packages and services starting today.",
+    "subjudul1": "Sewa Bot — Perubahan Harga Terbaru",
+    "subjudul1_en": "Bot Rental — Latest Price Changes",
+    "paragraf2": "Beberapa paket BASIC & VIP mengalami penyesuaian harga. Disarankan mengambil paket 2 bulan ke atas karena jauh lebih hemat.",
+    "paragraf2_en": "Several BASIC & VIP packages have had their prices adjusted. We recommend taking a package of 2 months or more since it's much more economical.",
+    "subjudul_basic": "Paket Basic",
+    "subjudul_basic_en": "Basic Package",
+    "subjudul_vip": "Paket VIP",
+    "subjudul_vip_en": "VIP Package",
+    "catatan_judul": "Catatan Penting",
+    "catatan_judul_en": "Important Note",
+    "catatan": [
+      "Harga lama masih berlaku untuk pembayaran yang sudah dilakukan sebelum pengumuman ini.",
+      "Kenaikan ini murni akibat fluktuasi kurs dolar terhadap Rupiah.",
+      "Kami berusaha menekan kenaikan seminimal mungkin agar tetap terjangkau.",
+      "Terima kasih banyak atas pengertian dan dukungannya."
+    ],
+    "catatan_en": [
+      "The old price is still valid for payments made before this announcement.",
+      "This increase is purely due to fluctuations in the dollar exchange rate against the Rupiah.",
+      "We are trying to keep the increase as minimal as possible to stay affordable.",
+      "Thank you very much for your understanding and support."
+    ]
   }
 }
